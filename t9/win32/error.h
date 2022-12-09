@@ -22,6 +22,7 @@ class ErrorString {
   LPTSTR c_str() const { return reinterpret_cast<LPTSTR>(buf_.get()); }
 
  public:
+  /// @brief エラーコードから文字列への変換
   static ErrorString from_code(DWORD code);
 };
 
